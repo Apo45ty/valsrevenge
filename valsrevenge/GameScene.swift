@@ -8,7 +8,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, GameViewControllerDelegate{
     
     private var player :Player?
     
@@ -23,8 +23,25 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         player = childNode(withName: "player") as? Player
         player?.move(.stop)
+        setupCamera()
+    }
+    func didChangeLayout() {
+        let w = view? .bounds.size.width ?? 1024
+        let h = view? .bounds.size.height ?? 1336
+        
+        if h >= w {
+            camera?.setScale(1.0)
+        } else {
+            camera?.setScale(1.25)
+        }
     }
     
+    func setupCamera(){
+        guard let player = player else {return}
+        let distance = SKRange(constantValue: 0)
+        let playerConstrant = SKConstraint.distance(distance, to: player)
+        camera?.constraints = [playerConstrant]
+    }
     func touchDown(atPoint pos : CGPoint) {
         let nodeAtPoint = atPoint(pos)
         if let touchedNode = nodeAtPoint as? SKSpriteNode{

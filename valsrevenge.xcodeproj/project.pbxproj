@@ -15,6 +15,8 @@
 		24E70C4E275526EA00E1EA47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24E70C4D275526EA00E1EA47 /* Assets.xcassets */; };
 		24E70C51275526EA00E1EA47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E70C4F275526EA00E1EA47 /* LaunchScreen.storyboard */; };
 		24E70C5927554DCB00E1EA47 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E70C5827554DCB00E1EA47 /* Player.swift */; };
+		24E70C5B2755785300E1EA47 /* Controller.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24E70C5A2755785300E1EA47 /* Controller.sks */; };
+		24E70C5D275579F900E1EA47 /* AttackButton.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24E70C5C275579F900E1EA47 /* AttackButton.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		24E70C50275526EA00E1EA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24E70C57275529C500E1EA47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		24E70C5827554DCB00E1EA47 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		24E70C5A2755785300E1EA47 /* Controller.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Controller.sks; sourceTree = "<group>"; };
+		24E70C5C275579F900E1EA47 /* AttackButton.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AttackButton.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				24E70C40275526E800E1EA47 /* AppDelegate.swift */,
+				24E70C5A2755785300E1EA47 /* Controller.sks */,
 				24E70C42275526E900E1EA47 /* GameScene.sks */,
+				24E70C5C275579F900E1EA47 /* AttackButton.sks */,
 				24E70C46275526E900E1EA47 /* GameScene.swift */,
 				24E70C48275526E900E1EA47 /* GameViewController.swift */,
 				24E70C4A275526E900E1EA47 /* Main.storyboard */,
@@ -133,6 +139,8 @@
 			files = (
 				24E70C4C275526E900E1EA47 /* Main.storyboard in Resources */,
 				24E70C43275526E900E1EA47 /* GameScene.sks in Resources */,
+				24E70C5B2755785300E1EA47 /* Controller.sks in Resources */,
+				24E70C5D275579F900E1EA47 /* AttackButton.sks in Resources */,
 				24E70C4E275526EA00E1EA47 /* Assets.xcassets in Resources */,
 				24E70C51275526EA00E1EA47 /* LaunchScreen.storyboard in Resources */,
 			);
