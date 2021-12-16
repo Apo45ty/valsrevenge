@@ -90,7 +90,7 @@ class GameScene: SKScene, GameViewControllerDelegate{
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
-    
+    let margin :CGFloat = 20.0
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
@@ -109,5 +109,14 @@ class GameScene: SKScene, GameViewControllerDelegate{
         }
         
         self.lastUpdateTime = currentTime
+    }
+    override func didFinishUpdate() {
+        updateControllerLocation()
+    }
+    func updateControllerLocation(){
+        let controller = childNode(withName: "//controller")
+        controller?.position = CGPoint(x: viewLeft+margin, y: viewBottom+margin)
+        let attackButton = childNode(withName: "//attackButton")
+        attackButton?.position = CGPoint(x: viewRight-margin, y: viewBottom+margin)
     }
 }
